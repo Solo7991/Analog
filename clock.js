@@ -89,7 +89,7 @@ function static() {
   ctx.fill();
   ctx.stroke();
 
-  ctx.fillStyle = "white";
+  ctx.fillStyle = "black";
   ctx.strokeStyle = "rgb(150,150,150)";
 
   //
@@ -120,8 +120,8 @@ function inner() {
 
   let roman = "i-ii-iii-iv-v-vi-vii-viii-ix-x-xi-xii".split("-");
 
-  ctx.strokeStyle = "black";
-  ctx.fillStyle = "black";
+  ctx.strokeStyle = "red";
+  ctx.fillStyle = "magenta";
   ctx.textAlign = "center";
   ctx.textBaseline = "top";
   ctx.font = "18pt bold serif";
@@ -137,7 +137,7 @@ function inner() {
     ctx.moveTo(CX, pos);
     ctx.lineTo(CX, pos + tick);
 
-    let text = ticker == 12 ? "XII" : roman.shift().toUpperCase();
+    let text = ticker == 12 ? "xii" : roman.shift();
 
     ctx.fillText(text, CX, pos + (.18 * R3), 15);
 
@@ -225,9 +225,9 @@ function min(factor = 0) {
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.clearRect(0, 0, 500, 500);
 
-  ctx.strokeStyle = "black";
+  ctx.strokeStyle = "magenta";
   ctx.fillStyle = "rgb(200,200,200)";
-  ctx.lineWidth = 2;
+  ctx.lineWidth = 1;
 
   // rotate
 
@@ -264,7 +264,7 @@ function hour(factor = 1) {
 
   // hour commands
 
-  ctx.strokeStyle = "black";
+  ctx.strokeStyle = "magenta";
   ctx.fillStyle = "rgb(255,100, 100)";
   ctx.lineWidth = 2;
 
